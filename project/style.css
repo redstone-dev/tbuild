@@ -1,0 +1,22 @@
+dialog {
+  z-index: 1;
+  width:100%;
+  top:0;
+}
+
+input {
+  border-radius: 10px;
+  padding:.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn-danger.close {
+  padding: 0;
+}
+
+button:focus{
+  z-index: 2
+}
