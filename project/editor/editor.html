@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <meta charset="utf-8" />
+	    <title></title>
+	    <link data-require="bootstrap@*" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	    />
+	    <script data-require="bootstrap@*" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    <link rel="stylesheet" href="editorstyles.css" />
+	    <script src="script.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+		<dialog open style="width:50%;position:fixed;" id="widgets">
+			<h3>Widgets</h3>
+			<h4>Add Widgets to your template<br>to actually make it a template!</h4>
+			<p>Here's the list of widgets:</p>
+			<table style="width:50%" class="table-striped table-hover table table-responsive">
+				<tr>
+					<th>Name</th>
+					<th>Clickable</th>
+					<th>+</th>
+				</tr>
+				<tr>
+					<td>Header</td>
+					<td>Kind of</td>
+					<td><button class="btn btn-success">+</button></td>
+				</tr>
+			</table>
+		</dialog>
+    <h2 class="jumbotron text-center">Editor</h2>
+		<button class="btn btn-success" id="add">Widgets</button>
+		
+		<script>
+			$a = $("#add");
+			$w = $("#widgets");
+			$w.hide();
+			$a.click(function(){
+				$w.toggle();
+			});
+		</script>
+  </body>
+</html>
