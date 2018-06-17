@@ -1,2 +1,69 @@
 # tbuild
 Build templates with lots of widgets &amp; actions.
+
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link data-require="bootstrap@*" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	/>
+	<script data-require="bootstrap@*" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<header class="alert alert-warning alert-dismissible">
+		<button class="close" data-dismiss="alert"><a href="#">&CircleTimes;</a></button>
+		<p><b>Warning:</b> The Editor is doing weird things, so I'll be working on an Iframe version, where it just opens up in a
+			dialog.
+		</p>
+	</header>
+	<dialog open id="op">
+		<p id="x" class="btn btn-danger close">&times;</p>
+		<h3>Options</h3>
+		<hr>
+		<ul>
+			<li>Usual type when opening Editor: <select class="btn btn-default">
+          <option value="default">Default (Responsive)</option>
+          <option value="cs">
+           </option>
+        </select></li>
+			<li>
+				<input type="checkbox" id="check-truefalse"> E-newsletter
+				<ul id="truefalse">
+					<li>If the checkbox is checked, receive it every: <input type="date"></li>
+					<li>If you checked the checkbox and<br>chose a receive date, type your email<br> address: <input type="email">
+						<ul>Verify:<input type="email"></ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</dialog>
+	<h1>TBuild</h1>
+	<div class="col-sm-6 col-md-8 col-lg-12 btn-group">
+		<button class="btn btn-success" id="opt">Options</button>
+		<!--a href=""--><button class="btn btn-success" id="editor">Editor</button><!--/a-->
+	</div>
+	<script>
+		$opt = $("#opt");
+      $opt_p = $("#op");
+      $opt_p.hide();
+      $x = $("#x");
+      $opt.click(function() {
+         $opt_p.slideDown("slow");
+      });
+      $("#add").hide();
+      $x.click(function() {
+        // $opt_p.fadeTo(0.5, "slow"); Ignore this
+        $opt_p.slideUp("slow");
+      });
+			$("button[data-dismiss=alert]").click(function(){
+				$(".alert.alert-warning").toggleClass("alert").toggleClass("alert-warning").slideUp("slow");
+			});
+	</script>
+</body>
+
+</html>
