@@ -1,0 +1,7 @@
+tr,th{padding:5px;}
+#add{
+  z-index: 1;
+}
+dialog{
+  z-index: 3;
+}
