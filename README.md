@@ -1,2 +1,2 @@
-# tbuild.github.io
+# tbuild
 Build templates with lots of widgets &amp; actions.
